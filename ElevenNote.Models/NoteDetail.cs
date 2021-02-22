@@ -18,5 +18,7 @@ namespace ElevenNote.Models
 
         [Display(Name = "Modified")]
         public DateTimeOffset? ModifiedUtc { get; set; }
+        public int? CategoryID { get; set; }
+        public virtual CategoryListItems Category { get; set; }
     }
 }

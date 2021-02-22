@@ -13,6 +13,6 @@ namespace ElevenNote.Data
         public int CategoryID { get; set; }
         [Required]
         public string Name { get; set; }
-        public
+        public virtual List<Note> Notes { get; set; }
     }
 }

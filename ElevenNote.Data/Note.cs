@@ -14,7 +14,8 @@ namespace ElevenNote.Data
         [Key]
         public int NoteId { get; set; }
         [ForeignKey(nameof(Category))]
-        public int CategoryID { get; set; }
+        public int? CategoryId { get; set; }
+        public virtual Category Category { get; set; }
         
         [Required]
         public Guid OwnerId { get; set; }
@@ -29,5 +30,6 @@ namespace ElevenNote.Data
         public DateTimeOffset CreatedUtc { get; set; }
 
         public DateTimeOffset? ModifiedUtc { get; set; }
+
     }
 }

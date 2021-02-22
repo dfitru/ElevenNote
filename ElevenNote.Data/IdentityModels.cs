@@ -28,12 +28,13 @@ namespace ElevenNote.Data
             : base("DefaultConnection", throwIfV1Schema: false)
         {
         }
-        
+
         public static ApplicationDbContext Create()
         {
             return new ApplicationDbContext();
         }
         public DbSet<Note> Notes { get; set; }
+        public DbSet<Category>Categories {get;set;}
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
